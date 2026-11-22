@@ -10,6 +10,7 @@
 | **paper-digest** | `skills/论文/paper-digest/` | 单篇论文快速内容吸收（三层渐进式结构梳理 + 主动回忆自测卡） | [drpwchen/paper-review-and-digest](https://github.com/drpwchen/paper-review-and-digest) (MIT) |
 | **how-to-read-a-paper** | `skills/论文/how-to-read-a-paper/` | 基于 Jason Eisner 与 Keshav 三遍精读法的高效论文阅读与笔记工作流 | [thisisrick25/how-to-read-a-paper](https://github.com/thisisrick25/how-to-read-a-paper) |
 | **deep-reading-analyst** | `skills/论文/deep-reading-analyst/` | 10+ 思维框架深度阅读分析（SCQA、5W2H、批判性思维、逆向思维、第一性原理、系统思维、六顶思考帽等） | [ginobefun/deep-reading-analyst-skill](https://github.com/ginobefun/deep-reading-analyst-skill) (MIT) |
+| **humanizer** | `skills/写作润色/humanizer/` | 去除文本“AI味”，按自然人类写作风格改写与润色（v4.0.0） | [blader/humanizer](https://github.com/blader/humanizer) (MIT) |
 
 ---
 
@@ -22,18 +23,18 @@
 git clone https://github.com/IAOinthemoon/.agent.git .agent
 ```
 
-或者将本仓库克隆到个人目录后，软链接到各工具的全局 Skills 目录（注意部分工具只扫描一级子目录，需链接到 `skills/论文/*`）：
+或者将本仓库克隆到个人目录后，软链接到各工具的全局 Skills 目录（注意部分工具只扫描一级子目录，需链接到分类文件夹下的 `*`）：
 
 ```bash
 git clone https://github.com/IAOinthemoon/.agent.git ~/.agent
 
 # 例如链接到 Claude Code / 通用工具全局目录：
 mkdir -p ~/.claude/skills
-ln -s ~/.agent/skills/论文/* ~/.claude/skills/
+ln -s ~/.agent/skills/论文/* ~/.agent/skills/写作润色/* ~/.claude/skills/
 
 # 或者链接到 OpenCode 全局目录：
 mkdir -p ~/.config/opencode/skills
-ln -s ~/.agent/skills/论文/* ~/.config/opencode/skills/
+ln -s ~/.agent/skills/论文/* ~/.agent/skills/写作润色/* ~/.config/opencode/skills/
 ```
 
 更新技能时只需在仓库目录执行：
